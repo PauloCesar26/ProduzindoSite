@@ -6,7 +6,8 @@
 }
 body{
     width: 100%;
-    max-width: 2000px;
+    max-width: 3000px;
+    min-width: 450px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,7 +26,8 @@ ul{
 nav{
     width: 100%;
     height: auto;
-    max-width: 2000px;
+    max-width: 3000px;
+    min-width: 450px;
     margin-left: auto;
     margin-right: auto;
     /* background-color: aqua; */
@@ -35,16 +37,13 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #eceff1;
+    background-color: #dbdbdb;
     color: black;
-    padding: 1.7rem 0rem;
+    padding: 1.9rem 0rem;
     position: relative;
     font-size: 1.1rem;
 }
-.logo{
-    margin-left: 15px;
-}
-.menu{
+/* .menu{
     display: flex;
     align-items: center;
 }
@@ -53,8 +52,8 @@ nav{
     align-items: center;
     gap: 20px;
     margin-bottom: 0;
-}
-.items a{
+} */
+/* .items a{
     color: black;
     padding: 8px 10px 8px 10px;
     align-items: center;
@@ -73,10 +72,10 @@ nav{
 }
 .items a:hover::after{
     width: 100%;
-}
+} */
 .contato{
     background-color: rgb(155, 155, 155);
-    padding: 8px 10px 8px 10px;
+    padding: 0.9rem 4rem 0.9rem 2rem;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
 }
@@ -84,16 +83,15 @@ nav{
     background-color: rgb(85, 85, 85);
     color: black;
 }
-.botoes .items-botoes{
+/* .botoes .items-botoes{
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 0;
-}
+} */
 
 
-
-
+/* Carrossel */
 section{
     width: 100%;
     height: calc(100vh - 10rem);
@@ -106,27 +104,87 @@ section:nth-child(1){
     width: 100%;
     height: 55vh;
     max-height: 900px;
+    z-index: 1;
+    position: relative;
 }
-
-.carousel-inner img{
+#img1{
+    background-image: url("../img/aguia.jpeg");
     background-attachment:scroll;
     background-position: center;
     background-size:cover;
     object-fit: cover;
+}
+#img2{
+    background-image: url("../img/aguia.jpeg");
+    background-attachment:scroll;
+    background-position: center;
+    background-size:cover;
+    object-fit: cover;
+}
+.carousel-item img{
+    background-attachment:scroll;
+    background-position: center;
+    background-size:cover;
+    object-fit: cover;
+    display: block;
     width: 100%;
     height: 100%;
 }
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+.carousel-caption{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    color: white; 
+    align-items: center;
+}
+.carousel-caption h2{
+    font-size: 3.5rem;
+}
+.carousel-caption p{
+    font-size: 1.5rem;
+}
+.container-cap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+
+/* Linktree */
 .links-social{
     width: 100%;
     height: auto;
-    /* background-color: aqua; */
+    background-color: #dbdbdb;
     padding: 1.2rem 2rem;
 }
 .links-social h1{
     width: 100%;
     /* background-color: blue; */
     text-align: center;
+    font-size: 1.5rem;
+}
+.links-social h2{
+    text-align: center;
+}
+.botoes-links{
+    /* background-color: aqua; */
+    margin-top: 50px;
 }
 .botoes-links .items-botoes-links{
     /* background-color: blueviolet; */
@@ -141,18 +199,19 @@ section:nth-child(1){
     border: none;
     display: flex;
     align-items: center;
+    font-size: 1.6rem;
 }
 .btn-links i{
     pointer-events: none;
-    margin-right: 10px;
-    font-size: 1.5rem;
+    margin-right: 20px;
+    font-size: 2.5rem;
     border-right: 1px solid black;
-    padding-right: 10px;
+    padding-right: 2rem;
 }
 
 
-
-.mobile-menu-icon{
+/* Menu mobile */
+/* .mobile-menu-icon{
     display: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -173,11 +232,9 @@ section:nth-child(1){
     max-height: 0;
     transition: 0.5s ease-in-out;
     overflow: hidden;
-}
-
-
+} */
 @media screen and (max-width: 760px){
-    .container-navbar{
+    /* .container-navbar{
         padding: 1.5rem 0rem;
     }
     .menu{
@@ -223,5 +280,8 @@ section:nth-child(1){
         font-size: 1.2rem;
         width: 90%;
         margin-bottom: 10px;
+    } */
+    .contato{
+        padding: 0.9rem 10rem 0.9rem 2rem;
     }
 }
